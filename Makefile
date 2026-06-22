@@ -1,4 +1,4 @@
-# OrbitNFT Makefile - Common development commands
+# Stellar NFT Contract Makefile - Common development commands
 
 .PHONY: build test clean deploy fmt lint
 
@@ -25,7 +25,7 @@ clean:
 # Deploy to Stellar Testnet
 deploy:
 	soroban contract deploy \
-		--wasm target/wasm32v1-none/release/orbitnft.wasm \
+		--wasm target/wasm32v1-none/release/stellar_nft_contract.wasm \
 		--network testnet
 
 # Build and deploy in one step
@@ -34,7 +34,7 @@ all: build deploy
 # Show help
 help:
 	@echo "Available commands:"
-	@echo "  make build   - Build the smart contract"
+	@echo "  make build   - Build the Stellar NFT Contract"
 	@echo "  make test    - Run all tests"
 	@echo "  make fmt     - Format code with cargo fmt"
 	@echo "  make lint    - Run cargo clippy linter"
